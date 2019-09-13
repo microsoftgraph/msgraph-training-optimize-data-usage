@@ -24,15 +24,13 @@ namespace app
 
       var client = GetAuthenticatedGraphClient(config);
 
-      var options = new List<QueryOption>
-      {
-        new QueryOption("$select","displayName,mail"),
-        new QueryOption("$top","15"),
-        // new QueryOption("$orderby","displayName desc")
-        new QueryOption("$filter","startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')")
-      };
-
-      var results = client.Users.Request(options).GetAsync().Result;
+      var results = client.Users
+                          .Request()
+                          .Select(u => new { u.DisplayName, u.Mail })
+                          .Top(15)
+                          .Filter("startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')")
+                          .GetAsync()
+                          .Result;
       foreach (var user in results)
       {
         Console.WriteLine(user.Id + ": " + user.DisplayName + " <" + user.Mail + ">");

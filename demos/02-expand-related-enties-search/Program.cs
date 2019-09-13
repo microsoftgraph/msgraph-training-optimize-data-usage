@@ -24,12 +24,7 @@ namespace app
 
       var client = GetAuthenticatedGraphClient(config);
 
-      var options = new List<QueryOption>
-      {
-        new QueryOption("$top","5")
-      };
-
-      var graphRequest = client.Groups.Request(options).Expand("members");
+      var graphRequest = client.Groups.Request().Top(5).Expand("members");
       var results = graphRequest.GetAsync().Result;
       foreach (var group in results)
       {
