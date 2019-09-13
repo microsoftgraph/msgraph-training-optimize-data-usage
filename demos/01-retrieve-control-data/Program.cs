@@ -33,7 +33,8 @@ namespace app
       };
 
       var results = client.Users.Request(options).GetAsync().Result;
-      foreach(var user in results){
+      foreach (var user in results)
+      {
         Console.WriteLine(user.Id + ": " + user.DisplayName + " <" + user.Mail + ">");
       }
     }
@@ -50,8 +51,7 @@ namespace app
         if (string.IsNullOrEmpty(config["applicationId"]) ||
             string.IsNullOrEmpty(config["applicationSecret"]) ||
             string.IsNullOrEmpty(config["redirectUri"]) ||
-            string.IsNullOrEmpty(config["tenantId"]) ||
-            string.IsNullOrEmpty(config["domain"]))
+            string.IsNullOrEmpty(config["tenantId"]))
         {
           return null;
         }
