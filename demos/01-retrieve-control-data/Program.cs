@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+using System;
 using System.Collections.Generic;
 using Microsoft.Identity.Client;
 using Microsoft.Graph;
@@ -24,18 +27,21 @@ namespace app
 
       var client = GetAuthenticatedGraphClient(config);
 
-      var options = new List<QueryOption>
+      var graphRequest = client.Users
+                          .Request()
+                          .Select(u => new { u.DisplayName, u.Mail })
+                          .Top(15)
+                          .Filter("startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')");
+      var results = graphRequest
+                          .GetAsync()
+                          .Result;
+      foreach (var user in results)
       {
-        new QueryOption("$select","displayName,mail"),
-        new QueryOption("$top","15"),
-        // new QueryOption("$orderby","displayName desc")
-        new QueryOption("$filter","startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')")
-      };
-
-      var results = client.Users.Request(options).GetAsync().Result;
-      foreach(var user in results){
         Console.WriteLine(user.Id + ": " + user.DisplayName + " <" + user.Mail + ">");
       }
+
+      Console.WriteLine("\nGraph Request:");
+      Console.WriteLine(graphRequest.GetHttpRequestMessage().RequestUri);
     }
 
     private static IConfigurationRoot LoadAppSettings()
@@ -50,8 +56,7 @@ namespace app
         if (string.IsNullOrEmpty(config["applicationId"]) ||
             string.IsNullOrEmpty(config["applicationSecret"]) ||
             string.IsNullOrEmpty(config["redirectUri"]) ||
-            string.IsNullOrEmpty(config["tenantId"]) ||
-            string.IsNullOrEmpty(config["domain"]))
+            string.IsNullOrEmpty(config["tenantId"]))
         {
           return null;
         }

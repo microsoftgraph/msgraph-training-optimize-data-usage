@@ -1,0 +1,6 @@
+{
+  "tenantId": "YOUR_TENANT_ID_HERE",
+  "applicationId": "YOUR_APP_ID_HERE",
+  "applicationSecret": "YOUR_APP_SECRET_HERE",
+  "redirectUri": "YOUR_REDIRECT_URI_HERE"
+}

@@ -10,12 +10,12 @@ This completed project is the result of the lab exercise **Expand related entiti
 
 ## Run this Completed Project
 
-- Create an Azure AD application by following the instructions in the first lab exercise associated with this module. In this step, you are instructed to collect four data elements:
+- Rename the file **appsettings.json.example** to **appsettings.json**
+- Create an Azure AD application by following the instructions in the lab exercise associated with this demo. In this step, you are instructed to collect these data elements:
   - tenantId
   - applicationId
   - applicationSecret
-  - domain
-- Update the properties in the [appsettings.json](./appsettings.json) with the values you collected in the last step.
+- Update the properties in the **[appsettings.json](./appsettings.json)** with the values you collected in the last step.
 - Build & run the application by following the instructions in the lab exercise associated with this demo.
 
 ## Use the the Graph Explorer Web Tool

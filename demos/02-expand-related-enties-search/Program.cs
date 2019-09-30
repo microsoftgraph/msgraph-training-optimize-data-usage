@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT license.
+
+using System;
 using System.Collections.Generic;
 using Microsoft.Identity.Client;
 using Microsoft.Graph;
@@ -24,17 +27,12 @@ namespace app
 
       var client = GetAuthenticatedGraphClient(config);
 
-      var options = new List<QueryOption>
-      {
-        new QueryOption("$top","5")
-      };
-
-      var graphRequest = client.Groups.Request(options).Expand("members");
+      var graphRequest = client.Groups.Request().Top(5).Expand("members");
       var results = graphRequest.GetAsync().Result;
-      foreach(var group in results)
+      foreach (var group in results)
       {
         Console.WriteLine(group.Id + ": " + group.DisplayName);
-        foreach(var member in group.Members)
+        foreach (var member in group.Members)
         {
           Console.WriteLine("  " + member.Id + ": " + ((Microsoft.Graph.User)member).DisplayName);
         }
@@ -56,8 +54,7 @@ namespace app
         if (string.IsNullOrEmpty(config["applicationId"]) ||
             string.IsNullOrEmpty(config["applicationSecret"]) ||
             string.IsNullOrEmpty(config["redirectUri"]) ||
-            string.IsNullOrEmpty(config["tenantId"]) ||
-            string.IsNullOrEmpty(config["domain"]))
+            string.IsNullOrEmpty(config["tenantId"]))
         {
           return null;
         }
