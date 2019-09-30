@@ -2,21 +2,21 @@
 
 Learn how to control the amount of data returned by Microsoft Graph to optimize queries using query parameters.
 
-> This module is also published as a Microsoft Learn module: [Optimize Data Usage when Using Microsoft Graph with Query Parameters](https://docs.microsoft.com/learn/TODO)
+> This module is also published as a Microsoft Learn module: [Optimize Data Usage when Using Microsoft Graph with Query Parameters](https://docs.microsoft.com/learn/modules/optimize-data-usage)
 
 ## Lab - Optimize Data Usage when Using Microsoft Graph with Query Parameters
 
 The lab for this module is available in multiple units within the associated Microsoft Learn module. Use the following links to jump to the specific unit. Each Microsoft Learn unit represents a different lab exercise & demo in the presentation.
 
-1. [Retrieve and control information returned from Microsoft Graph](https://docs.microsoft.com/learn/TODO)
+1. [Exercise: Retrieve and control information returned from Microsoft Graph](https://docs.microsoft.com/learn/modules/optimize-data-usage/3-exercise-retrieve-control-information-returned-from-microsoft-graph)
 
     In this exercise, you will create a new Azure AD web application registration using the Azure Active Directory admin center, a .NET Core console application and query the Microsoft Graph.
 
-1. [Expand related entities & search content in Microsoft Graph](https://docs.microsoft.com/learn/TODO)
+1. [Exercise: Expand related entities & search content in Microsoft Graph](https://docs.microsoft.com/en-us/learn/modules/optimize-data-usage/5-exercise-expand-related-entities-search-content-microsoft-graph)
 
     In this exercise, you'll use the Azure AD application and .NET console application you previously created to find related entities and search for users by using the $expand and $search query parameters.
 
-1. [Reduce traffic with batched requests](https://docs.microsoft.com/learn/TODO)
+1. [Exercise: Reduce traffic with batched requests](https://docs.microsoft.com/en-us/learn/modules/optimize-data-usage/7-exercise-reduce-traffic-with-batched-requests)
 
     In this exercise, you'll use the Graph Explorer to create and issue a single request that contains multiple child requests. This batching of requests enables developers to submit multiple requests in a single round-trip request to Microsoft Graph, creating more optimized queries.
 
@@ -25,6 +25,10 @@ The lab for this module is available in multiple units within the associated Mic
 1. [Retrieve and control information returned from Microsoft Graph](./demos/01-retrieve-control-data)
 1. [Expand related entities & search content in Microsoft Graph](./demos/02-expand-related-enties-search)
 1. [Reduce traffic with batched requests](./demos/03-reduce-traffic-batch)
+
+## Watch the module
+
+This module has been recorded and is available in the Office Development YouTube channel: [Optimize data usage when using Microsoft Graph with query parameters](https://youtu.be/8cIPfpRvCJ8)
 
 ## Contributors
 
@@ -35,9 +39,10 @@ The lab for this module is available in multiple units within the associated Mic
 
 ## Version history
 
-| Version |       Date        |                     Comments                     |
-| ------- | ----------------- | ------------------------------------------------ |
-| 1.0     | September 11, 2019    | New module published                             |
+| Version |        Date        |                                        Comments                                         |
+| ------- | ------------------ | --------------------------------------------------------------------------------------- |
+| 1.1     | September 30, 2019 | Add: copyright statement to code; screencast link, exercise links, MS Learn module link |
+| 1.0     | September 11, 2019 | New module published                                                                    |
 
 ## Disclaimer
 
