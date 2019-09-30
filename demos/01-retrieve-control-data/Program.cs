@@ -27,17 +27,21 @@ namespace app
 
       var client = GetAuthenticatedGraphClient(config);
 
-      var results = client.Users
+      var graphRequest = client.Users
                           .Request()
                           .Select(u => new { u.DisplayName, u.Mail })
                           .Top(15)
-                          .Filter("startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')")
+                          .Filter("startsWith(surname,'A') or startsWith(surname,'B') or startsWith(surname,'C')");
+      var results = graphRequest
                           .GetAsync()
                           .Result;
       foreach (var user in results)
       {
         Console.WriteLine(user.Id + ": " + user.DisplayName + " <" + user.Mail + ">");
       }
+
+      Console.WriteLine("\nGraph Request:");
+      Console.WriteLine(graphRequest.GetHttpRequestMessage().RequestUri);
     }
 
     private static IConfigurationRoot LoadAppSettings()
