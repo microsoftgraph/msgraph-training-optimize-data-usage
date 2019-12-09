@@ -35,14 +35,16 @@ This module has been recorded and is available in the Office Development YouTube
 |        Roles         |                                       Author(s)                                       |
 | -------------------- | ------------------------------------------------------------------------------------- |
 | Lab / Slides / Demos | Andrew Connell (Microsoft MVP, Voitanos) [@andrewconnell](//github.com/andrewconnell) |
+| QA                   | Rob Windsor (Microsoft MVP, PAIT Group) [@rob-windsor](//github.com/rob-windsor)      |
 | Sponsor / Support    | Jeremy Thake (Microsoft) [@jthake](//github.com/jthake)                               |
 
 ## Version history
 
-| Version |        Date        |                                        Comments                                         |
-| ------- | ------------------ | --------------------------------------------------------------------------------------- |
-| 1.1     | September 30, 2019 | Add: copyright statement to code; screencast link, exercise links, MS Learn module link |
-| 1.0     | September 11, 2019 | New module published                                                                    |
+| Version |           Date           |                                        Comments                                         |
+| ------- | ------------------------ | --------------------------------------------------------------------------------------- |
+| 1.2     | FY2020Q2 content refresh |                                                                                         |
+| 1.1     | September 30, 2019       | Add: copyright statement to code; screencast link, exercise links, MS Learn module link |
+| 1.0     | September 11, 2019       | New module published                                                                    |
 
 ## Disclaimer
 
