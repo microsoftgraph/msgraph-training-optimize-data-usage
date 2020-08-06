@@ -1,6 +1,6 @@
 # Demo: Reduce traffic with batched requests
 
-This completed project is the result of the lab exercise **Reduce traffic with batched requests** that is referenced in the [README](../../) in this repo.
+This completed project is the result of the lab exercise **Reduce traffic with batched requests** that is referenced in the [README](../../README.md) in this repo.
 
 ## Prerequisites
 
