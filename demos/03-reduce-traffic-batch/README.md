@@ -4,8 +4,8 @@ This completed project is the result of the lab exercise **Reduce traffic with b
 
 ## Prerequisites
 
-- Office 365 Tenancy
+- [Microsoft 365 tenant](https://developer.microsoft.com/office/dev-program?ocid=MSlearn)
 
 ## Use the the Graph Explorer Web Tool
 
-The second part of this demo is to use the Graph Explorer web tool. Follow the steps in the lab exercise associated with this module.
+This demo uses the Graph Explorer web tool. Follow the steps in the lab exercise associated with this module.
