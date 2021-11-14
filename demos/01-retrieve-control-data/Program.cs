@@ -10,11 +10,11 @@ using Helpers;
 
 namespace graphconsoleapp
 {
-  class Program
+  public class Program
   {
-    private static GraphServiceClient _graphClient;
+    private static GraphServiceClient? _graphClient;
 
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
 
@@ -44,7 +44,7 @@ namespace graphconsoleapp
       Console.WriteLine(graphRequest.GetHttpRequestMessage().RequestUri);
     }
 
-    private static IConfigurationRoot LoadAppSettings()
+    private static IConfigurationRoot? LoadAppSettings()
     {
       try
       {

@@ -10,11 +10,11 @@ using Helpers;
 
 namespace graphconsoleapp
 {
-  class Program
+  public class Program
   {
-    private static GraphServiceClient _graphClient;
+    private static GraphServiceClient _graphClient = null!;
 
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
 
@@ -57,14 +57,14 @@ namespace graphconsoleapp
             string.IsNullOrEmpty(config["redirectUri"]) ||
             string.IsNullOrEmpty(config["tenantId"]))
         {
-          return null;
+          return null!;
         }
 
         return config;
       }
       catch (System.IO.FileNotFoundException)
       {
-        return null;
+        return null!;
       }
     }
 
