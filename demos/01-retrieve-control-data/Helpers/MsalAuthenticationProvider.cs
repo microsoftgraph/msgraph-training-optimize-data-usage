@@ -28,7 +28,7 @@ namespace Helpers
 
     public async Task<string> GetTokenAsync()
     {
-      AuthenticationResult authResult = null;
+      AuthenticationResult authResult;
       authResult = await _clientApplication.AcquireTokenForClient(_scopes).ExecuteAsync();
       return authResult.AccessToken;
     }
