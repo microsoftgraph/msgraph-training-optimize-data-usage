@@ -11,8 +11,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Graph" Version="4.10.0" />
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.37.0" />
+    <PackageReference Include="Microsoft.Graph" Version="4.17.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.40.0" />
   </ItemGroup>
 
 </Project>
