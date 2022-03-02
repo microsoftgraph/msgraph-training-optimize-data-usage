@@ -12,7 +12,7 @@ namespace graphconsoleapp
 {
   public class Program
   {
-    private static GraphServiceClient _graphClient = null!;
+    private static GraphServiceClient? _graphClient;
 
     public static void Main(string[] args)
     {
@@ -43,7 +43,7 @@ namespace graphconsoleapp
       Console.WriteLine(graphRequest.GetHttpRequestMessage().RequestUri);
     }
 
-    private static IConfigurationRoot LoadAppSettings()
+    private static IConfigurationRoot? LoadAppSettings()
     {
       try
       {
@@ -57,14 +57,14 @@ namespace graphconsoleapp
             string.IsNullOrEmpty(config["redirectUri"]) ||
             string.IsNullOrEmpty(config["tenantId"]))
         {
-          return null!;
+          return null;
         }
 
         return config;
       }
       catch (System.IO.FileNotFoundException)
       {
-        return null!;
+        return null;
       }
     }
 
